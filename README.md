@@ -12,3 +12,5 @@ Otra alternativa para la implementación de una lista es usar memoria dinámica,
 Una lista enlazada simple es una estructura de datos lineal y dinámica, formada por una colección de elementos llamados nodos, cada nodo está conformado por dos elementos, el primero se usa para almacenar la información y el segundo elemento para guardar la dirección del siguiente nodo.
 
 Cabe destacar que el último elemento de la lista guarda como dirección al siguiente elemento una referencia NUL, y el primer elemento es apuntado por un apuntador especifico al primer elemento.
+
+https://www.programacion.com.py/escritorio/c/listas-en-c
