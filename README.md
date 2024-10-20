@@ -87,13 +87,17 @@ bool Lista::estaVacia()
 {
 	return primeroPtr == NULL;
 }
+~~~
 
+~~~c++
 // Constructor predeterminado
 Lista::Lista()
 {
 	primeroPtr = NULL;
 }
+~~~
 
+~~~c++
 // Destructor predeterminado
 Lista::destruirLista()
 {
@@ -115,7 +119,9 @@ Lista::destruirLista()
 	}
 	cout << "\n\nSe destruyeron todos los nodos.\n\n";
 }
+~~~
 
+~~~c++
 // Inserta un nodo al inicio de la lista
 void Lista::insertarAlInicio(int valor)
 {
@@ -133,7 +139,9 @@ void Lista::insertarAlInicio(int valor)
 	
 	primeroPtr = nuevoPtr; // Apunto el primer nodo de la lista al nuevo nodo
 }
+~~~
 
+~~~c++
 void Lista::recorreIterativo()
 {
 	if( estaVacia() ) // Si la lista está vacia
@@ -157,6 +165,7 @@ void Lista::recorreIterativo()
 	system("pause");
 }
 ~~~
+
 Adicionalmente se tiene el proceso necesario para mostrar el menú en el cual se presentan las opciones de las operaciones a realizar con el programa.
 
 ~~~c++
