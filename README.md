@@ -22,7 +22,184 @@ Cabe destacar que el último elemento de la lista guarda como dirección al sigu
 
 Para implementar una lista dinámica enlazada en el lenguaje de programación C++, se procede a crear los elementos necesarios para implementar la estructura de datos necesaria para guardar de manera adecuada y eficiente los datos necesarios.
 
+/*
+Clase Nodo
+Definición de los nodos de la lista
 
+Datos:
+ dato: valor que almacena el nodo
+ *siguientePtr: apuntador al siguiente nodo en la lista
+
+Procedimientos:
+ insertarAlInicio: procedimiento encargado de insertar un nodo al inicio de la lista
+ RecorreIterativo: procedimiento encargado de recorrer y mostrar el valor de cada nodo de la lista
+*/
+class Nodo
+{
+	public:
+		int dato; // Variable para almacenar el valor del nodo
+		Nodo *siguientePtr; // Apuntador al siguiente nodo de la lista
+};
+
+En el código mostrado, podemos reconocer la estructura de un nodo de un tipo dinámico de datos, el cual está compuesto por una variable en la cual podemos almacenar un dato de un 
+tipo específico y un apuntador que indica la ubicación exacta del siguiente nodo de la lista.
+
+Para poder implementar una lista dinámica enlazada, se debe implementar un tipo abstracto de dato lista, el cual consta de una estructura de datos que permite almacenar el primer elemento
+de la lista, ademas de una variable que indica si la misma esta vacia o contiene algún elemento.
+
+Por otro lado tiene una estructura de comportamiento fomrada por los procesos que operan en dicha estructura de datos, el constructor por efecto, el proceso encargado de agregar 
+un nuevo elemento al comienzo de la lista, por último el proceso encargado de recorrer la lista desde el primer elemento hasta el último.
+
+/*
+Clase lista
+Definición de la lista de nodos
+
+Datos:
+ primeroPtr:
+ estaVacia:
+
+Procedimientos:
+ insertarAlInicio: procedimiento encargado de insertar un nodo al inicio de la lista
+ RecorreIterativo: procedimiento encargado de recorrer y mostrar el valor de cada nodo de la lista
+*/
+class Lista
+{
+	private:
+		Nodo *primeroPtr; // Apuntador al primer nodo de la lista
+		bool estaVacia(); // Variable que indica si la lista está vacia
+		
+	public:
+		Lista();      // Constructor
+		destruirLista();   // Destructor
+		void insertarAlInicio(int valor); // inserta un nodo al inicio de la lista
+		void recorreIterativo(); // muestra el contenido de la lista
+};
+
+// Definicion de las funciones de la clase Lista
+// ***********************************************************
+// Verifica si la lista está vacia
+bool Lista::estaVacia()
+{
+	return primeroPtr == NULL;
+}
+
+// Constructor predeterminado
+Lista::Lista()
+{
+	primeroPtr = NULL;
+}
+
+// Destructor predeterminado
+Lista::destruirLista()
+{
+	if( !estaVacia() )
+	{
+		cout << "\n\nDestruyendo nodos...\n\n";
+		
+		Nodo *actualPtr = primeroPtr;
+		Nodo *tempPtr;
+		
+		// Eliminar los nodos restantes
+		while( actualPtr != NULL )
+		{
+			tempPtr = actualPtr;
+			cout << tempPtr->dato << ' ';
+			actualPtr = actualPtr->siguientePtr;
+			delete tempPtr;
+		}
+	}
+	cout << "\n\nSe destruyeron todos los nodos.\n\n";
+}
+
+// Inserta un nodo al inicio de la lista
+void Lista::insertarAlInicio(int valor)
+{
+	Nodo *nuevoPtr = new Nodo(); // Nodo temporal para agregar el nuevo nodo
+	nuevoPtr->dato = valor;
+	
+	if( estaVacia() ) // Si la lista esta vacia
+	{
+		nuevoPtr->siguientePtr = NULL; // El nuevo nodo apunta a nulo
+	}
+	else // Si la lista no esta vacia
+	{
+		nuevoPtr->siguientePtr = primeroPtr; // Apunta el nuevo nodo al nodo que era el primero
+	}
+	
+	primeroPtr = nuevoPtr; // Apunto el primer nodo de la lista al nuevo nodo
+}
+
+void Lista::recorreIterativo()
+{
+	if( estaVacia() ) // Si la lista está vacia
+	{
+		cout << "\nLa lista esta vacia\n\n";
+		system("pause");
+		return;
+	}
+	
+	Nodo *actualPtr = primeroPtr;
+	
+	cout << "\nLos elementos de la lista son: ";
+	
+	while( actualPtr != NULL ) // Se obtienen todos los datos de la lista
+	{
+		cout << actualPtr->dato << " -> ";
+		actualPtr = actualPtr->siguientePtr;
+	}
+	
+	cout << "\n\n";
+	system("pause");
+}
+
+Adicionalmente se tiene el proceso necesario para mostrar el menú en el cual se presentan las opciones de las operaciones a realizar con el programa.
+
+// Menu de opciones
+
+void menu()
+{
+	system("cls");
+	cout << "\n ..[ LISTA SIMPLE ENLAZADA ]..";
+	cout << "\n ..[ Ing. Danny Colmenares ]..\n\n";
+	cout << "[1] Insertar elemento al inicio de la lista \n";
+	cout << "[2] Imprimir los valores de la lista \n";
+	cout << "[3] SALIR \n";
+	cout << "\nIngrese opcion : ";
+	
+}
+
+Por último se tiene el programa principal en el cual se lee la opción del menú seleccionada para proceder a realizar el proceso seleccionado en el menú del programa
+
+int main()
+{
+	int opcion; // Variable para almacenar la opción seleccionada del menú
+	int valor;  // Variable para almacenar el valor a ingresar en la lista
+	
+	Lista listaEnteros;
+	
+	system("color 1F");
+	
+	do
+	{
+		menu();
+		cin >> opcion;
+		
+		switch( opcion )
+		{
+			case 1: // Insertar nodo al principio de la lista
+				cout << "\nIngrese un valor entero: ";
+				cin >> valor;
+				listaEnteros.insertarAlInicio( valor );
+				listaEnteros.recorreIterativo();
+				break;
+			case 2: // Recorrer la lista
+				listaEnteros.recorreIterativo();
+				break;
+		}
+	}while( opcion != 3 );
+	
+	return 0;
+}
 
 # Referencias
 
