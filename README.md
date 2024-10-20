@@ -22,6 +22,7 @@ Cabe destacar que el último elemento de la lista guarda como dirección al sigu
 
 Para implementar una lista dinámica enlazada en el lenguaje de programación C++, se procede a crear los elementos necesarios para implementar la estructura de datos necesaria para guardar de manera adecuada y eficiente los datos necesarios.
 
+~~~c++
 /*
 Clase Nodo
 Definición de los nodos de la lista
@@ -40,6 +41,7 @@ class Nodo
 		int dato; // Variable para almacenar el valor del nodo
 		Nodo *siguientePtr; // Apuntador al siguiente nodo de la lista
 };
+~~~
 
 En el código mostrado, podemos reconocer la estructura de un nodo de un tipo dinámico de datos, el cual está compuesto por una variable en la cual podemos almacenar un dato de un 
 tipo específico y un apuntador que indica la ubicación exacta del siguiente nodo de la lista.
@@ -50,6 +52,7 @@ de la lista, ademas de una variable que indica si la misma esta vacia o contiene
 Por otro lado tiene una estructura de comportamiento fomrada por los procesos que operan en dicha estructura de datos, el constructor por efecto, el proceso encargado de agregar 
 un nuevo elemento al comienzo de la lista, por último el proceso encargado de recorrer la lista desde el primer elemento hasta el último.
 
+~~~c++
 /*
 Clase lista
 Definición de la lista de nodos
@@ -151,9 +154,10 @@ void Lista::recorreIterativo()
 	cout << "\n\n";
 	system("pause");
 }
-
+~~~
 Adicionalmente se tiene el proceso necesario para mostrar el menú en el cual se presentan las opciones de las operaciones a realizar con el programa.
 
+~~~c++
 // Menu de opciones
 
 void menu()
@@ -167,9 +171,11 @@ void menu()
 	cout << "\nIngrese opcion : ";
 	
 }
+~~~
 
 Por último se tiene el programa principal en el cual se lee la opción del menú seleccionada para proceder a realizar el proceso seleccionado en el menú del programa
 
+~~~c++
 int main()
 {
 	int opcion; // Variable para almacenar la opción seleccionada del menú
@@ -200,6 +206,7 @@ int main()
 	
 	return 0;
 }
+~~~
 
 # Referencias
 
