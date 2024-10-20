@@ -31,9 +31,6 @@ Datos:
  dato: valor que almacena el nodo
  *siguientePtr: apuntador al siguiente nodo en la lista
 
-Procedimientos:
- insertarAlInicio: procedimiento encargado de insertar un nodo al inicio de la lista
- RecorreIterativo: procedimiento encargado de recorrer y mostrar el valor de cada nodo de la lista
 */
 class Nodo
 {
@@ -77,7 +74,9 @@ class Lista
 		void insertarAlInicio(int valor); // inserta un nodo al inicio de la lista
 		void recorreIterativo(); // muestra el contenido de la lista
 };
+~~~
 
+~~~c++
 // Definicion de las funciones de la clase Lista
 // ***********************************************************
 // Verifica si la lista está vacia
