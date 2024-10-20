@@ -2,9 +2,9 @@
 
 Fundamentos de declaracion y uso de listas enlazadas dinámicas en el lenguaje de programacion C++
 
-En el campo del procesamiento de datos se encuentra la necesidad de manipular datos que, segun las caracteristicas del problema planteado, deben ser representados de una manera particular, a la cual llamamos estructura de datos. La construccion de los algoritmos que manipularan dichos datos dependeran de la estructura de datos definida con la finalidad de aportar eficiencia al algoritmo.
+En el campo del procesamiento de datos se encuentra la necesidad de manipular datos que, según las caracteristicas del problema planteado, deben ser representados de una manera particular, a la cual llamamos estructura de datos. La construcción de los algoritmos que manipularán dichos datos dependerán de la estructura de datos definida con la finalidad de aportar eficiencia al algoritmo.
 
-Las estructuras de datos se pueden clasificar segun el modo de almacenar los datos en la memoria del computador y la forma de acceder a los mismos. Desde el punto de vista del almacenamiento en la memoria del computador, se clasifican en estructuras de datos estáticas o dinámicias.
+Las estructuras de datos se pueden clasificar según el modo de almacenar los datos en la memoria del computador y la forma de acceder a los mismos. Desde el punto de vista del almacenamiento en la memoria del computador, se clasifican en estructuras de datos estáticas o dinámicias.
 
 Según la forma de acceder a los datos durante la ejecución de los algorítmos, se clasifican en lineales o no lineales.
 
@@ -18,7 +18,11 @@ Otra alternativa para la implementación de una lista es usar memoria dinámica,
 
 Una lista enlazada simple es una estructura de datos lineal y dinámica, formada por una colección de elementos llamados nodos, cada nodo está conformado por dos elementos, el primero se usa para almacenar la información y el segundo elemento para guardar la dirección del siguiente nodo.
 
-Cabe destacar que el último elemento de la lista guarda como dirección al siguiente elemento una referencia NUL, y el primer elemento es apuntado por un apuntador especifico al primer elemento.
+Cabe destacar que el último elemento de la lista guarda como dirección al siguiente elemento una referencia NULL, y el primer elemento es apuntado por un apuntador especifico al primer elemento de la lista.
+
+Para implementar una lista dinámica enlazada en el lenguaje de programación C++, se procede a crear los elementos necesarios para implementar la estructura de datos necesaria para guardar de manera adecuada y eficiente los datos necesarios.
+
+
 
 # Referencias
 
