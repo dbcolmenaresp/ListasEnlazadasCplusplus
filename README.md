@@ -76,6 +76,9 @@ class Lista
 };
 ~~~
 
+Luego de definir la interfaz y el comportamiento de la clase Lista, se procede a definir las funciones que componen este comportamiento, el cual esta constituido por el constructor
+por defecto, el destructor para liberar memoria, el procedimiento de inserción de nodos y el procedimiento de recorrido de la lista.
+
 ~~~c++
 // Definicion de las funciones de la clase Lista
 // ***********************************************************
