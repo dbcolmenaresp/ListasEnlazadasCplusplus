@@ -221,4 +221,7 @@ int main()
 
 # Referencias
 
+Joyanes, L. Estructura de datos en C++. Disponible en:
+https://drive.google.com/file/d/1TlBJK2GQtObK7k9pf9McbLsrlWUtdgMf/view
+
 https://www.programacion.com.py/escritorio/c/listas-en-c
